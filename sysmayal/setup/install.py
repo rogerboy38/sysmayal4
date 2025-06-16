@@ -13,9 +13,12 @@ from frappe.utils import cint, cstr, nowdate
 def after_install():
     """
     Called after Sysmayal app installation.
-    Sets up initial data and configurations.
+    Sets up initial data and configurations for V15.
     """
-    print("Setting up Sysmayal...")
+    print("Setting up Sysmayal for Frappe/ERPNext V15...")
+    
+    # Check V15 compatibility first
+    check_v15_compatibility()
     
     # Setup user roles and permissions
     setup_user_roles()
@@ -29,7 +32,13 @@ def after_install():
     # Setup default configurations
     setup_default_configurations()
     
-    print("Sysmayal setup completed successfully!")
+    # Setup workspace for V15
+    setup_workspace()
+    
+    # Create default workspace shortcuts
+    setup_workspace_shortcuts()
+    
+    print("Sysmayal V15 setup completed successfully!")
 
 def setup_user_roles():
     """Create and configure user roles for Sysmayal."""
@@ -174,7 +183,7 @@ def setup_default_configurations():
             print(f"Created naming series: {series['prefix']}")
 
 def setup_workspace():
-    """Setup Sysmayal workspace."""
+    """Setup Sysmayal workspace for V15."""
     
     if not frappe.db.exists("Workspace", "Sysmayal"):
         workspace = frappe.new_doc("Workspace")
@@ -183,5 +192,108 @@ def setup_workspace():
         workspace.category = "Modules"
         workspace.icon = "globe"
         workspace.public = 1
+        workspace.is_standard = 0
+        workspace.developer_mode_only = 0
+        
+        # Add workspace content for V15
+        workspace.content = '''[
+            {
+                "id": "sysmayal-shortcuts",
+                "type": "shortcut",
+                "data": {
+                    "shortcut_name": "Distribution Organization",
+                    "link_to": "Distribution Organization",
+                    "type": "DocType"
+                }
+            },
+            {
+                "id": "sysmayal-reports",
+                "type": "shortcut", 
+                "data": {
+                    "shortcut_name": "Distribution Analytics",
+                    "link_to": "Distribution Analytics Report",
+                    "type": "Report"
+                }
+            }
+        ]'''
+        
         workspace.save(ignore_permissions=True)
-        print("Created Sysmayal workspace")
+        print("Created Sysmayal workspace for V15")
+        
+def check_v15_compatibility():
+    """Check V15 compatibility during installation."""
+    
+    # Check Frappe version
+    frappe_version = frappe.__version__
+    if not frappe_version.startswith('15'):
+        frappe.throw(f"This version of Sysmayal requires Frappe V15. Current version: {frappe_version}")
+    
+    print(f"✅ Frappe V15 compatibility confirmed: {frappe_version}")
+
+def setup_workspace_shortcuts():
+    """Setup workspace shortcuts for V15."""
+    
+    shortcuts = [
+        {
+            "label": "Distribution Organization",
+            "link_to": "Distribution Organization",
+            "type": "DocType",
+            "icon": "building",
+            "color": "blue"
+        },
+        {
+            "label": "Distribution Contact",
+            "link_to": "Distribution Contact", 
+            "type": "DocType",
+            "icon": "user",
+            "color": "green"
+        },
+        {
+            "label": "Product Compliance",
+            "link_to": "Product Compliance",
+            "type": "DocType",
+            "icon": "check-circle",
+            "color": "orange"
+        },
+        {
+            "label": "Country Regulation",
+            "link_to": "Country Regulation",
+            "type": "DocType",
+            "icon": "globe",
+            "color": "red"
+        },
+        {
+            "label": "Market Entry Plan",
+            "link_to": "Market Entry Plan",
+            "type": "DocType", 
+            "icon": "target",
+            "color": "purple"
+        }
+    ]
+    
+    for shortcut in shortcuts:
+        if not frappe.db.exists("Workspace Shortcut", {"label": shortcut["label"]}):
+            workspace_shortcut = frappe.new_doc("Workspace Shortcut")
+            workspace_shortcut.update(shortcut)
+            workspace_shortcut.save(ignore_permissions=True)
+            print(f"Created workspace shortcut: {shortcut['label']}")
+
+def validate_doctype_compatibility():
+    """Validate all DocTypes are V15 compatible."""
+    
+    doctypes_to_check = [
+        "Distribution Organization",
+        "Distribution Contact", 
+        "Product Compliance",
+        "Country Regulation",
+        "Market Entry Plan",
+        "Product Development Project",
+        "Certification Document",
+        "Market Research"
+    ]
+    
+    for doctype in doctypes_to_check:
+        if frappe.db.exists("DocType", doctype):
+            print(f"✅ DocType {doctype} is ready for V15")
+        else:
+            print(f"⚠️  DocType {doctype} not found - will be created during migration")

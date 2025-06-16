@@ -1,0 +1,39 @@
+{
+    "name": "sysmayal",
+    "title": "Sysmayal",
+    "description": "Global Distribution & R&D Management for Aloe Vera Products",
+    "version": "2.1.1",
+    "author": "Sysmayal Development Team",
+    "email": "dev@sysmayal.com",
+    "license": "MIT",
+    "homepage": "https://github.com/rogerboy38/sysmayal2",
+    "repository": "https://github.com/rogerboy38/sysmayal2.git",
+    "keywords": ["frappe", "erpnext", "aloe vera", "distribution", "r&d", "regulatory compliance"],
+    "min_frappe_version": "15.0.0",
+    "min_erpnext_version": "15.0.0",
+    "dependencies": {
+        "frappe": ">=15.0.0",
+        "erpnext": ">=15.0.0"
+    },
+    "app_type": "frappe_app",
+    "categories": [
+        "Manufacturing",
+        "ERP",
+        "Compliance",
+        "Distribution"
+    ],
+    "app_icon": "octicon octicon-globe",
+    "app_color": "green",
+    "supported_languages": ["en", "es"],
+    "supported_currencies": ["USD", "EUR", "GBP", "CAD", "AUD", "MXN"],
+    "features": [
+        "Global Distribution Management",
+        "Regulatory Compliance Tracking",
+        "R&D Project Management",
+        "Document Management",
+        "Multi-language Support",
+        "Bulk Data Import",
+        "CRM Integration",
+        "Website Publishing"
+    ]
+}

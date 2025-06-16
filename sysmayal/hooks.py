@@ -16,6 +16,13 @@ app_color = "green"
 app_email = "dev@sysmayal.com"
 app_license = "MIT"
 
+# Required Frappe apps for V15 compatibility
+required_apps = ["frappe", "erpnext"]
+
+# Minimum required versions for compatibility
+min_frappe_version = "15.0.0"
+min_erpnext_version = "15.0.0"
+
 # Includes in <head>
 # ------------------
 
