@@ -12,7 +12,7 @@ bench version
 # erpnext 15.x.x (optional)
 ```
 
-### **Step 2: Install Sysmayal**
+### **Step 2: Install Sysmayal** new
 ```bash
 # Navigate to your bench
 cd /path/to/your/bench
