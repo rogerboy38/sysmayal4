@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sysmayal - Global Distribution & R&D Management
 
 A comprehensive Frappe application for managing aloe vera product distribution, regulatory compliance, and research & development activities across global markets.
@@ -260,3 +261,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
  #   s y s m a y a l 6  
  #   s y s m a y a l 6  
  
+=======
+# sysmayal4
+>>>>>>> 8f4aa4e1514ecd0590d976f86a6862d2e9b557f0
