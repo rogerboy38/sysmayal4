@@ -40,7 +40,7 @@
       },
       {
         "state": "Revision",
-        "doc_status": "2",
+        "doc_status": "0",
         "allow_edit": "R&D Manager",
         "is_optional_state": 0
       }
@@ -86,124 +86,15 @@
       },
       {
         "state": "Rejected",
-        "action": "Cancel",
+        "action": "Request Revision",
         "next_state": "Revision",
         "allowed": "R&D Manager"
       },
       {
         "state": "Revision",
-        "action": "Reopen as Draft",
-        "next_state": "Draft",
+        "action": "Resubmit",
+        "next_state": "Pending Review",
         "allowed": "R&D Manager"
-      }
-    ]
-  },
-  {
-    "doctype": "Workflow",
-    "name": "Product Compliance Review",
-    "document_type": "Product Compliance",
-    "workflow_name": "Product Compliance Review",
-    "is_active": 1,
-    "send_email_alert": 1,
-    "workflow_state_field": "workflow_state",
-    "states": [
-      {
-        "state": "Draft",
-        "doc_status": "0",
-        "allow_edit": "Compliance Officer",
-        "is_optional_state": 0
-      },
-      {
-        "state": "Under Review",
-        "doc_status": "0",
-        "allow_edit": "Compliance Officer",
-        "is_optional_state": 0
-      },
-      {
-        "state": "Testing Required",
-        "doc_status": "0",
-        "allow_edit": "R&D Manager",
-        "is_optional_state": 0
-      },
-      {
-        "state": "Regulatory Submission",
-        "doc_status": "0",
-        "allow_edit": "Compliance Officer",
-        "is_optional_state": 0
-      },
-      {
-        "state": "Compliant",
-        "doc_status": "1",
-        "allow_edit": null,
-        "is_optional_state": 0
-      },
-      {
-        "state": "Non-Compliant",
-        "doc_status": "1",
-        "allow_edit": "Compliance Officer",
-        "is_optional_state": 0
-      },
-      {
-        "state": "Revision",
-        "doc_status": "2",
-        "allow_edit": "Compliance Officer",
-        "is_optional_state": 0
-      }
-    ],
-    "transitions": [
-      {
-        "state": "Draft",
-        "action": "Start Review",
-        "next_state": "Under Review",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Under Review",
-        "action": "Require Testing",
-        "next_state": "Testing Required",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Under Review",
-        "action": "Submit to Regulatory",
-        "next_state": "Regulatory Submission",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Under Review",
-        "action": "Mark Non-Compliant",
-        "next_state": "Non-Compliant",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Testing Required",
-        "action": "Testing Complete",
-        "next_state": "Under Review",
-        "allowed": "R&D Manager"
-      },
-      {
-        "state": "Regulatory Submission",
-        "action": "Approval Received",
-        "next_state": "Compliant",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Regulatory Submission",
-        "action": "Submission Rejected",
-        "next_state": "Non-Compliant",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Non-Compliant",
-        "action": "Cancel Compliance",
-        "next_state": "Revision",
-        "allowed": "Compliance Officer"
-      },
-      {
-        "state": "Revision",
-        "action": "Reopen Draft",
-        "next_state": "Draft",
-        "allowed": "Compliance Officer"
       }
     ]
   }
