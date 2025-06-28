@@ -287,25 +287,30 @@ class SysmayalDashboard {
 
     async get_compliance_data() {
         return await frappe.call({
-            method: 'sysmayal.sysmayal.doctype.product_compliance.product_compliance.get_compliance_dashboard_data'
+            method: 'sysmayal.doctype.product_compliance.product_compliance.get_compliance_dashboard_data',
+            args: {}
+        });
+    }
+        return await frappe.call({
+            method: 'sysmayal.doctype.product_compliance.product_compliance.get_compliance_dashboard_data'
         });
     }
 
     async get_projects_data() {
         return await frappe.call({
-            method: 'sysmayal.sysmayal.doctype.product_development_project.product_development_project.get_project_dashboard_data'
+            method: 'sysmayal.product_development_project.product_development_project.get_project_dashboard_data'
         });
     }
 
     async get_certificates_data() {
         return await frappe.call({
-            method: 'sysmayal.sysmayal.doctype.certification_document.certification_document.get_certificate_dashboard_data'
+            method: 'sysmayal.doctype.certification_document.certification_document.get_certificate_dashboard_data'
         });
     }
 
     async get_market_plans_data() {
         return await frappe.call({
-            method: 'sysmayal.sysmayal.doctype.market_entry_plan.market_entry_plan.get_market_entry_dashboard'
+            method: 'sysmayal.doctype.market_entry_plan.market_entry_plan.get_market_entry_dashboard'
         });
     }
 
