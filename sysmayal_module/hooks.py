@@ -7,7 +7,7 @@ from . import __version__ as app_version
 """
 
 
-module_name = "sysmayal_module"
+# module_name = "sysmayal_module"
 app_name = "sysmayal"
 app_title = "sysmayal"
 app_publisher = "Sysmayal Development Team"
