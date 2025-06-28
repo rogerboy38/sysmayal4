@@ -3,13 +3,16 @@
  "doctype": "Page",
  "modified": "2025-06-07 10:31:09.000000",
  "modified_by": "Administrator",
- "module": "Sysmayal",
+ "module": "sysmayal",
  "name": "sysmayal-dashboard",
  "owner": "Administrator",
  "page_name": "Sysmayal Dashboard",
  "roles": [
   {
    "role": "Distribution Manager"
+  },
+  {
+   "role": "Administrator"
   },
   {
    "role": "R&D Manager"
