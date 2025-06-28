@@ -1,1 +1,6 @@
-# Placeholder for __init__.py in sysmayal_module/setup
+__version__ = "1.0.0"
+"""
+Setup module for Sysmayal app installation and configuration.
+"""
+
+pass

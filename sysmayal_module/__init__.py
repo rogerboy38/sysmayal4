@@ -1,3 +1,4 @@
 """
-Sysmayal main app package (renamed to sysmayal_module).
+Sysmayal main app package.
 """
+__version__ = "1.0.0"

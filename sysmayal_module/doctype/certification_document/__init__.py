@@ -1,1 +1,5 @@
-# Placeholder for __init__.py in sysmayal_module/doctype/certification_document
+"""
+Certification Document DocType module initialization.
+"""
+
+pass
