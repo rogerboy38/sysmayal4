@@ -39,7 +39,7 @@
         "is_optional_state": 0
       },
       {
-        "state": "Cancelled",
+        "state": "Revision",
         "doc_status": "2",
         "allow_edit": "R&D Manager",
         "is_optional_state": 0
@@ -87,11 +87,11 @@
       {
         "state": "Rejected",
         "action": "Cancel",
-        "next_state": "Cancelled",
+        "next_state": "Revision",
         "allowed": "R&D Manager"
       },
       {
-        "state": "Cancelled",
+        "state": "Revision",
         "action": "Reopen as Draft",
         "next_state": "Draft",
         "allowed": "R&D Manager"
@@ -144,7 +144,7 @@
         "is_optional_state": 0
       },
       {
-        "state": "Cancelled",
+        "state": "Revision",
         "doc_status": "2",
         "allow_edit": "Compliance Officer",
         "is_optional_state": 0
@@ -196,11 +196,11 @@
       {
         "state": "Non-Compliant",
         "action": "Cancel Compliance",
-        "next_state": "Cancelled",
+        "next_state": "Revision",
         "allowed": "Compliance Officer"
       },
       {
-        "state": "Cancelled",
+        "state": "Revision",
         "action": "Reopen Draft",
         "next_state": "Draft",
         "allowed": "Compliance Officer"
