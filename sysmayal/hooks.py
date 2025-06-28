@@ -3,9 +3,10 @@ Frappe Hooks for Sysmayal App
 
 This file contains all the hooks and configuration for integrating
 the Sysmayal app with the Frappe framework.
+from . import __version__ as app_version
 """
 
-from . import __version__ as app_version
+
 
 app_name = "sysmayal"
 app_title = "sysmayal"
