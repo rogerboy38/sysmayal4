@@ -294,14 +294,14 @@ fixtures = [
 # Scheduled tasks for compliance monitoring
 scheduler_events = {
     "daily": [
-        "sysmayal.tasks.check_certification_expiry",
-        "sysmayal.tasks.update_compliance_status"
+        "sysmayal_module.tasks.check_certification_expiry",
+        "sysmayal_module.tasks.update_compliance_status"
     ],
     "weekly": [
-        "sysmayal.tasks.generate_compliance_reports"
+        "sysmayal_module.tasks.generate_compliance_reports"
     ],
     "monthly": [
-        "sysmayal.tasks.archive_old_documents"
+        "sysmayal_module.tasks.archive_old_documents"
     ]
 }
 

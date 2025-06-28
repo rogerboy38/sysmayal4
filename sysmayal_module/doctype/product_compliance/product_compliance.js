@@ -298,7 +298,7 @@ function renew_compliance(frm) {
         __("Are you sure you want to renew this compliance record?"),
         function() {
             frappe.call({
-                method: "sysmayal.sysmayal_module_module.doctype.product_compliance.product_compliance.renew_compliance",
+                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.renew_compliance",
                 args: {
                     "compliance_name": frm.doc.name
                 },
@@ -343,7 +343,7 @@ function request_product_testing(frm) {
         primary_action_label: __("Request Testing"),
         primary_action: function(values) {
             frappe.call({
-                method: "sysmayal.sysmayal_module_module.doctype.product_compliance.product_compliance.request_testing",
+                method: "sysmayal.sysmayal_module.doctype.product_compliance.product_compliance.request_testing",
                 args: {
                     "compliance_name": frm.doc.name,
                     "test_details": values
