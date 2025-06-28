@@ -1,6 +1,6 @@
 [
  {
-  "module": "sysmayal",
+  "module": "sysmayal_module",
   "doctype": "Country Regulation",
   "name": "United States",
   "country_name": "United States",

@@ -252,7 +252,7 @@ function clear_territory(frm) {
 
 function check_duplicate_organization(frm) {
     frappe.call({
-        method: 'sysmayal.sysmayal_module_module.doctype.distribution_organization.distribution_organization.check_duplicate_organization',
+        method: 'sysmayal.sysmayal_module_module_module.doctype.distribution_organization.distribution_organization.check_duplicate_organization',
         args: {
             organization_name: frm.doc.organization_name,
             country: frm.doc.country
