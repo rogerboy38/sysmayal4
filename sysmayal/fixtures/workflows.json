@@ -28,13 +28,13 @@
       },
       {
         "state": "Approved",
-        "doc_status": "1",
+        "doc_status": "0",
         "allow_edit": null,
         "is_optional_state": 0
       },
       {
         "state": "Rejected",
-        "doc_status": "1",
+        "doc_status": "0",
         "allow_edit": "R&D Manager",
         "is_optional_state": 0
       },
