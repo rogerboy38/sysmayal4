@@ -7,8 +7,8 @@ the Sysmayal app with the Frappe framework.
 
 from . import __version__ as app_version
 
-app_name = "Sysmayal"
-app_title = "Sysmayal"
+app_name = "sysmayal"
+app_title = "sysmayal"
 app_publisher = "Sysmayal Development Team"
 app_description = "Global Distribution & R&D Management for Aloe Vera Products"
 app_icon = "octicon octicon-globe"
