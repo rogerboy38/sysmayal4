@@ -41,7 +41,7 @@ def after_install():
     print("Sysmayal V15 setup completed successfully!")
 
 def setup_user_roles():
-    """Create and configure user roles for Sysmayal."""
+    """Create and configure user roles for symayal2."""
     
     roles = [
         {

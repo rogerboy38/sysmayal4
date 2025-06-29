@@ -7,7 +7,7 @@ from . import __version__ as app_version
 """
 
 
-# module_name = "sysmayal_module"
+# module_name= "symayal2"
 app_name = "sysmayal"
 app_title = "sysmayal"
 app_publisher = "Sysmayal Development Team"
@@ -71,14 +71,14 @@ min_erpnext_version = "15.0.0"
 # Installation
 # ------------
 
-# before_install = "sysmayal.install.before_install"
+# before_install = "symayal2.install.before_install"
 after_install = "sysmayal2.setup.install.after_install"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "sysmayal.notifications.get_notification_config"
+# notification_config = "symayal2.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -117,39 +117,39 @@ after_install = "sysmayal2.setup.install.after_install"
 
 # scheduler_events = {
 # 	"all": [
-# 		"sysmayal.tasks.all"
+# 		"symayal2.tasks.all"
 # 	],
 # 	"daily": [
-# 		"sysmayal.tasks.daily"
+# 		"symayal2.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"sysmayal.tasks.hourly"
+# 		"symayal2.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"sysmayal.tasks.weekly"
+# 		"symayal2.tasks.weekly"
 # 	]
 # 	"monthly": [
-# 		"sysmayal.tasks.monthly"
+# 		"symayal2.tasks.monthly"
 # 	]
 # }
 
 # Testing
 # -------
 
-# before_tests = "sysmayal.install.before_tests"
+# before_tests = "symayal2.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "sysmayal.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "symayal2.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "sysmayal.task.get_dashboard_data"
+# 	"Task": "symayal2.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -285,7 +285,7 @@ fixtures = [
 # restrict modules based on user permissions
 
 # has_website_permission = {
-# 	"Sales Order": "sysmayal.permissions.has_website_permission"
+# 	"Sales Order": "symayal2.permissions.has_website_permission"
 # }
 
 # DocType specific
@@ -315,11 +315,11 @@ scheduler_events = {
 # Send error notifications to administrators for critical issues
 
 # on_session_creation = [
-# 	"sysmayal.utils.clear_notifications"
+# 	"symayal2.utils.clear_notifications"
 # ]
 
 # Boot session
 # ------------
 # Provide session data for client-side operations
 
-# boot_session = "sysmayal.boot.boot_session"
+# boot_session = "symayal2.boot.boot_session"

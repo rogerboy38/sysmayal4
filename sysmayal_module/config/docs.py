@@ -6,7 +6,7 @@ for the Sysmayal application.
 """
 
 source_link = "https://github.com/sysmayal/sysmayal"
-docs_base_url = "https://sysmayal.readthedocs.io"
+docs_base_url = "https://symayal2.readthedocs.io"
 headline = "Global Distribution & R&D Management"
 sub_heading = "Comprehensive solution for aloe vera product distribution and regulatory compliance"
 
