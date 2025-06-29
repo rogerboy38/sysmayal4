@@ -203,7 +203,7 @@ user_data_fields = [
 # --------------------------------
 
 # auth_hooks = [
-# 	"sysmayal_module.auth.validate"
+# 	"sysmayal2.auth.validate"
 # ]
 
 # Translation
@@ -294,14 +294,14 @@ fixtures = [
 # Scheduled tasks for compliance monitoring
 scheduler_events = {
     "daily": [
-        "sysmayal_module.tasks.check_certification_expiry",
-        "sysmayal_module.tasks.update_compliance_status"
+        "sysmayal2.tasks.check_certification_expiry",
+        "sysmayal2.tasks.update_compliance_status"
     ],
     "weekly": [
-        "sysmayal_module.tasks.generate_compliance_reports"
+        "sysmayal2.tasks.generate_compliance_reports"
     ],
     "monthly": [
-        "sysmayal_module.tasks.archive_old_documents"
+        "sysmayal2.tasks.archive_old_documents"
     ]
 }
 
